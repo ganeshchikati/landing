@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultancy Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb; /* modern blue */
+      --text-dark: #111827;
+      --text-light: #6b7280;
+      --bg-light: #f9fafb;
+      --white: #ffffff;
+      --radius: 1rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 1.5rem 5%;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-align: left;
+    }
+
+    header svg {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand h1 {
+      font-size: 1.8rem; /* smaller */
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .brand p {
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 4rem 5%;
+      background: var(--white);
+      border-radius: var(--radius);
+      margin: 2rem 5%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .hero-text h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      padding: 0.9rem 2rem;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+    }
+    .hero img {
+      flex: 1;
+      max-width: 450px;
+      border-radius: var(--radius);
+    }
+
+    /* Services */
+    .services {
+      padding: 4rem 5%;
+      text-align: center;
+    }
+    .services h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: var(--radius);
+      object-fit: cover;
+      margin-bottom: 1.2rem;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 4rem 5%;
+      background: var(--white);
+      text-align: center;
+      margin: 2rem 5%;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .cta p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 5%;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo -->
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20C0 12.5231 0 8.78461 1.60769 6C2.66091 4.17577 4.17577 2.66091 6 1.60769C8.78461 0 12.5231 0 20 0C27.4769 0 31.2154 0 34 1.60769C35.8242 2.66091 37.3391 4.17577 38.3923 6C40 8.78461 40 12.5231 40 20C40 27.4769 40 31.2154 38.3923 34C37.3391 35.8242 35.8242 37.3391 34 38.3923C31.2154 40 27.4769 40 20 40C12.5231 40 8.78461 40 6 38.3923C4.17577 37.3391 2.66091 35.8242 1.60769 34C0 31.2154 0 27.4769 0 20Z" fill="#0000FF"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M28.0441 7.60927C28.8868 6.80331 30.2152 6.79965 31.0622 7.58229L31.1425 7.66005L31.4164 7.94729C34.1911 10.9318 35.2251 14.4098 34.9599 17.8065C34.6908 21.2511 33.1012 24.4994 30.8836 27.0664C28.6673 29.6316 25.7084 31.6519 22.51 32.5287C19.2714 33.4164 15.7294 33.1334 12.6547 30.9629C10.0469 29.1218 9.05406 26.1465 8.98661 23.2561C7.52323 22.5384 5.98346 21.6463 4.36789 20.5615L3.941 20.2716L3.85006 20.206C2.93285 19.5053 2.72313 18.2084 3.39161 17.2564C4.06029 16.3043 5.36233 16.046 6.34665 16.6512L6.44134 16.7126L6.83024 16.9771C7.79805 17.6269 8.72153 18.1903 9.59966 18.6767C10.1661 16.6889 11.1047 14.7802 12.3413 13.207C14.1938 10.8501 16.9713 8.96525 20.374 9.24647C23.439 9.49995 25.7036 11.081 26.8725 13.3122C28.0044 15.4728 28.0211 18.0719 27.0319 20.307C26.0234 22.5857 23.976 24.484 21.0309 25.2662C18.9114 25.8291 16.4284 25.7905 13.6267 25.0367V25.0377C12.5115 24.7375 11.3427 24.323 10.1212 23.7846C9.8472 23.6638 9.60873 23.8483 10.1212 24.1686C11.5636 25.1924 13.5956 26.0505 14.1836 26.3385C14.4615 26.788 14.8061 27.1568 15.2011 27.4356C17.0188 28.7188 19.1451 28.9539 21.3396 28.3523C23.5743 27.7397 25.8141 26.2625 27.5514 24.2516C29.2873 22.2423 30.4065 19.8348 30.5909 17.4727C30.765 15.2439 30.1218 12.9543 28.1842 10.8736L27.9927 10.6731L27.9162 10.5906C27.1538 9.72748 27.2018 8.41516 28.0441 7.60927ZM20.0092 13.5651C18.6033 13.4489 17.1196 14.189 15.8013 15.8662C14.7973 17.1436 14.0376 18.8033 13.6503 20.5112C16.4093 21.4544 18.4655 21.4608 19.8942 21.0814C21.5481 20.6422 22.5399 19.6477 23.0172 18.5693C23.5137 17.4472 23.4628 16.2245 22.9813 15.3055C22.5369 14.4571 21.6422 13.7002 20.0092 13.5651Z" fill="#ffffff"></path>
+    </svg>
+    
+    <div class="brand">
+      <h1>Elevate Consulting</h1>
+      <p>Shaping businesses with modern solutions</p>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Accelerate Your Growth with Expert Guidance</h2>
+      <p>From startups to enterprises, we provide tailored strategies that empower your business to thrive in a competitive market.</p>
+      <button class="btn">Book a Consultation</button>
+    </div>
+    <img src="https://images.pexels.com/photos/3184299/pexels-photo-3184299.jpeg" alt="Business teamwork meeting">
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Expertise</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/7792818/pexels-photo-7792818.jpeg" alt="Strategy session">
+        <h3>Business Strategy</h3>
+        <p>Crafting innovative strategies to align your vision with market opportunities and long-term growth.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/7433879/pexels-photo-7433879.jpeg" alt="Finance planning">
+        <h3>Financial Advisory</h3>
+        <p>Smart financial planning and data-driven decisions to optimize profitability and reduce risks.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/6476255/pexels-photo-6476255.jpeg" alt="Marketing team">
+        <h3>Marketing & Branding</h3>
+        <p>Building compelling brands and powerful marketing strategies to maximize customer engagement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Let’s Build Something Great Together</h2>
+    <p>Partner with Elevate Consulting and take the first step towards sustainable success.</p>
+    <button class="btn">Get Started Today</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Elevate Consulting · All Rights Reserved</p>
+  </footer>
+</body>
+</html>
